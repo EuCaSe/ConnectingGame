@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #26002b, #530337);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: inline-block;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 7px 8px rgb(180, 1, 235);
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin: 2px;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+}
+
+.cell.X {
+  background-color: #7f0a8f;
+  box-shadow: 0 0 8px rgba(148, 2, 161, 0.7);
+}
+
+.cell.O {
+  background-color: #960365;
+  box-shadow: 0 0 8px rgba(105, 69, 105, 0.7);
+}
+
+
+
+button {
+  padding: 10px 20px;
+  background-color: #160016;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #300124;
+}
+
+.message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  animation: fadeIn 1s;
+}
+
+.message.X {
+  color: #ff6b6b;
+}
+
+.message.O {
+  color: #f7d794;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
